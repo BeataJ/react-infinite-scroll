@@ -1,6 +1,7 @@
 import React from 'react';
 
-function App() {
+
+export default function App() {
   return (
     <>
       <input type="text"></input>
