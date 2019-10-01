@@ -9,7 +9,7 @@ export default function useBookSearch(query, pageNumber) {
       url: 'http://openlibrary.org/search.json()',
       params: { p: query, page: pageNumber}
     }).then(res => {
-      console.log(data);
+      console.log(res.data);
     })
   }, [query, pageNumber])
   return null
