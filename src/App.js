@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <>
-      <input type="text" onChange={handleSearch}></input>
+      <input type="text" value={query} onChange={handleSearch}></input>
       {books.map(book => {
         return <div key={book}>{book}</div>
       })}
