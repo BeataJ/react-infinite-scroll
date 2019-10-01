@@ -1,9 +1,17 @@
 import React from 'react';
 
-
-
 function App() {
-  return null
+  return (
+    <>
+      <input type="text"></input>
+      <div>Title</div>
+      <div>Title</div>
+      <div>Title</div>
+      <div>Title</div>
+      <div>Loading...</div>
+      <div>Error</div>
+    </>
+  )
 }
 
 
