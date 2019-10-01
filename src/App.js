@@ -7,8 +7,8 @@ export default function App() {
   useBookSearch(query, pageNumber);
 
   function handleSearch(e) {
-    setQuery(e.target.value);
-    setPageNumber(1);
+    setQuery(e.target.value)
+    setPageNumber(1)
   }
 
   return (
