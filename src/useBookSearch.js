@@ -10,6 +10,8 @@ export default function useBookSearch(query, pageNumber) {
 
 
   useEffect(() => {
+    setLoading(true);
+    setError(false);
     let cancel;
     axios({
       method: 'GET',
@@ -17,6 +19,9 @@ export default function useBookSearch(query, pageNumber) {
       params: { q: query, page: pageNumber},
       cancelToken: new axios.CancelToken(c => cancel = c)
     }).then(res => {
+      setBooks(prevBooks => {
+        return [...new Set([...prevBooks, res.data.docs.map(b => b.title)])]
+      })
       console.log(res.data);
     }).catch(e => {
       if(axios.isCancel(e)) return
